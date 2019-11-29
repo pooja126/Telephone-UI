@@ -1,0 +1,926 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0c09db;
+  width: 683px;
+  height: 48px;
+  float: right;
+}
+
+li {
+  float: left;
+}
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+.content-selection {
+  margin-left: 331px;
+  margin-top: 15px;
+}
+button {
+  float: right;
+  margin-top: -21px;
+  margin-right: 2px;
+}
+
+/* Phone */
+
+#dialWrapper {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+input[type="tel"] {
+  height: 18px;
+  width: 150px;
+  font-family: inherit;
+  font-size: 11pt;
+  box-shadow: 0 0 6px #999;
+  margin-top: 27px;
+  margin-left: -44px;
+}
+label {
+  font-size: 13pt;
+  position: relative;
+  top: -30px;
+  left: 80px;
+}
+#dial {
+  width: 200px;
+  height: 200px;
+  border-collapse: collapse;
+  text-align: center;
+  visibility: hidden;
+  position: relative;
+  top: 88px;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  color: #000;
+  box-shadow: 0 0 6px #999;
+}
+.dialDigit {
+  border: 1px solid #fff;
+  cursor: pointer;
+  background-color: rgba(255, 228, 142, 0.7);
+}
+.dialDigit:hover {
+  background-color: rgb(255, 228, 142);
+}
+.dialDigit:active {
+  background-color: #ff6478;
+}
+#dialIcon {
+  cursor: pointer;
+  margin-top: 28px;
+}
+h2,
+h4 {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 0;
+}
+h4 {
+  padding: 0;
+  font-style: italic;
+}
+
+/********************ICONS*******************/
+
+i[class*="zmdi-"] {
+  margin: 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu {
+  float: left;
+}
+
+.search > i {
+  float: right;
+}
+
+.search {
+  float: right;
+}
+
+.more {
+  float: right;
+  color: rgba(0, 0, 0, 0.39);
+}
+
+.more > i {
+  margin: 24px 0;
+}
+
+.status-icon {
+  float: right;
+}
+
+.hour {
+  float: right;
+}
+
+.status-icon > i[class^="zmdi"],
+.hour {
+  font-size: 17px;
+  margin: 3px 0;
+  color: white;
+}
+
+.toolbar i {
+  color: white;
+}
+
+.stop > i {
+  font-size: 39px;
+}
+
+/********************HEADER*******************/
+
+.toolbar {
+  height: 56px;
+  background: #009688;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+/********************ELEMENTS*******************/
+.container {
+  position: absolute;
+  left: 50%;
+  margin-left: -176px;
+  box-shadow: 0px 2px 41px rgba(0, 0, 0, 0.68);
+}
+
+.contacts-list {
+  width: 360px;
+  height: 623px;
+  overflow: hidden;
+}
+
+.status-bar {
+  height: 24px;
+  background: #0a796d;
+  overflow: hidden;
+}
+
+.list-contact {
+  background: white;
+  height: 488px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.list-iten {
+  height: 71px;
+  border-bottom: 1px solid rgb(228, 228, 228);
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.infos {
+  padding: 19px 0 14px 0;
+  float: left;
+}
+
+.infos > p:first-child {
+  font-size: 19px;
+  color: rgb(100, 91, 91);
+}
+
+.infos > p:last-child {
+  font-size: 12px;
+  color: #009688;
+}
+
+.button-wrapper.active {
+  display: block;
+  position: absolute;
+  bottom: 54px;
+  width: 100%;
+  height: 314px;
+  overflow: hidden;
+}
+
+.dialpad-box {
+  color: white;
+  bottom: 54px;
+  width: 100%;
+  display: none;
+  z-index: 10;
+  background: #ff1744;
+  position: absolute;
+  overflow: hidden;
+}
+
+.dialpad-box.active {
+  opacity: 1;
+  display: block;
+}
+
+.row-number > div {
+  float: left;
+  width: 75px;
+  padding: 0 22px;
+  cursor: pointer;
+}
+
+.row-number > div > div:first-child {
+  font-size: 41px;
+  float: left;
+}
+
+.row-number > div > div:nth-child(2) {
+  margin: 27px 0 0 19px;
+  font-size: 12px;
+  float: left;
+}
+
+.row-option {
+  clear: both;
+  padding: 0 16px;
+  height: 56px;
+  background: #e20933;
+}
+
+.row-option > i:nth-child(2) {
+  font-size: 46px;
+  padding: 0;
+  margin: 5px 0px 0 0;
+  text-align: center;
+}
+
+.row-option > i {
+  float: left;
+  width: 109px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row-option > i:last-child {
+  text-align: right;
+}
+
+.letters {
+  font-weight: lighter;
+}
+
+.numbers .letters i {
+  font-size: 15px;
+  margin: 0;
+}
+
+.calling {
+  opacity: 0;
+  text-align: center;
+  overflow: hidden;
+  height: 488px;
+  color: white;
+  display: none;
+  background-repeat: no-repeat;
+  background-size: 100px;
+  filter: blur(50px);
+  z-index: 1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.calling.active {
+  display: block;
+}
+.calling.animate {
+  opacity: 1;
+}
+
+.contact-img-box {
+  width: 250px;
+  position: absolute;
+  border-radius: 100%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.contact-img-box.active {
+  width: 250px !important;
+  float: left;
+  height: 250px !important;
+  position: relative;
+  margin: 0 39px !important;
+  top: 50px !important;
+}
+
+.calling .contact-img {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 100%;
+  float: none;
+  overflow: hidden;
+  height: 40px;
+  width: 40px;
+}
+
+.contact-img-box.bg {
+  background: rgba(255, 255, 255, 0.19);
+}
+
+.contact-img-box .contact-img.active img {
+  margin: 0;
+  width: 210px !important;
+}
+
+.calling .contact-img.active {
+  height: 210px;
+  width: 210px;
+  margin: 19px auto;
+}
+
+.calling .contact-img.active img {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 210px !important;
+}
+
+.contact-img img {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.calling > div:first-child {
+  width: 100%;
+  position: relative;
+  float: left;
+  z-index: 5;
+}
+
+.calling-bg {
+  width: 100%;
+  height: 100%;
+  background-size: 450px 578px !important;
+  -webkit-filter: blur(36px);
+}
+.calling > div > div:nth-child(2) {
+  opacity: 0;
+  font-size: 26px;
+  color: rgba(255, 255, 255, 0.74);
+  font-weight: lighter;
+}
+
+.calling > div > div:nth-child(2).active {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  opacity: 1;
+}
+
+.calling-options > div {
+  margin: 8px 0 0 0;
+  float: left;
+}
+
+.calling-options {
+  overflow: auto;
+  clear: both;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.calling .contact-number {
+  font-size: 16px;
+}
+
+.calling-options .stop {
+  width: 70px;
+  height: 70px;
+  background: red;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.calling-options div.active {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+.calling-options div {
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.navigation-buttons {
+  width: 100%;
+  background: black;
+  height: 55px;
+  bottom: 0;
+  color: white;
+}
+
+.navigation-buttons > i {
+  padding: 0 30px;
+}
+
+.calling > div > div:nth-child(2) {
+  clear: both;
+  height: 63px;
+  margin: 0px 0 73px 0;
+  position: relative;
+  top: 53px;
+}
+
+.navigation-buttons > i:first-child {
+  transform: rotate(90deg);
+}
+
+/********************BUTTONS*******************/
+
+.dialpad {
+  text-align: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  background: #ff1744;
+  float: right;
+  margin: 16px;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 6px 7px rgba(0, 0, 0, 0.44);
+  position: relative;
+  bottom: 142px;
+  right: 1px;
+  display: block;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.dialpad:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.44);
+}
+
+.dialpad:active {
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.44);
+}
+
+.dialpad.active,
+.dialpad-box.hide,
+.button-wrapper.hide,
+.list-contact.desactive {
+  display: none !important;
+}
+
+.list-contact.desactive ~ .dialpad {
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+
+.layer {
+  float: right;
+  margin: 16px;
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  right: 0px;
+  bottom: -228px;
+  background: #ff1744;
+}
+
+.layer.active {
+  display: block;
+  -webkit-transform: translate(-130px, 200px);
+  -ms-transform: translate(-130px, 200px);
+  transform: translate(-131px, -110px);
+
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.layer.active.animation {
+  -webkit-transform: scale(100);
+  -ms-transform: scale(100);
+  transform: scale(100);
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.backspace {
+}
+/********************INPUTS*******************/
+
+.input-dialpad > input {
+  border: none;
+  width: 286px;
+  font-size: 46px;
+  background: none;
+  padding: 8px 2px 0 16px;
+  color: rgb(195, 14, 49);
+  float: left;
+  text-align: center;
+}
+
+.search > input {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  display: none;
+}
+
+/********************ANIMATIONS*******************/
+
+.ripple {
+  background: rgba(229, 28, 28, 1);
+  border-radius: 100%;
+  position: absolute;
+  min-width: 50px;
+  min-height: 50px;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.ripple.active {
+  background: rgba(255, 255, 255, 0.18);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+.position {
+  display: none;
+  -webkit-transition: 0.3s all ease 0.3s;
+  transition: 0.3s all ease 0.3s;
+}
+
+.list-contact .contact-img {
+  border-radius: 100%;
+  overflow: hidden;
+  float: left;
+  margin: 16px 16px 0 0;
+  height: 40px;
+  width: 40px;
+}
+/* tabs */
+article.tabs {
+  position: relative;
+  display: block;
+  width: 17em;
+  height: 15em;
+  margin: 2em auto;
+  margin-left: 381px;
+  margin-top: 20px;
+}
+
+article.tabs section {
+  position: absolute;
+  display: block;
+  top: 1.8em;
+  left: 0;
+  height: 16em;
+  padding: 0px 0px;
+  background-color: #ddd;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+  width: 117%;
+}
+
+article.tabs section:first-child {
+  z-index: 1;
+}
+
+article.tabs section h1 {
+  position: absolute;
+  font-size: 1em;
+  font-weight: normal;
+  width: 27px;
+  height: 1.8em;
+  top: -1.8em;
+  left: 10px;
+  padding: 0;
+  margin: 0;
+  color: black;
+  background-color: cornflowerblue;
+  border-radius: 5px 5px 0 0;
+  padding-right: 75px;
+}
+
+article.tabs section:nth-child(2) h1 {
+  left: 132px;
+}
+
+article.tabs section:nth-child(3) h1 {
+  left: 254px;
+}
+
+article.tabs section h1 a {
+  display: block;
+
+  line-height: 1.8em;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  outline: 0 none;
+  width: 36px;
+}
+
+article.tabs section,
+article.tabs section h2 {
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+article.tabs section:target,
+article.tabs section:target h1 {
+  color: #333;
+  background-color: #fff;
+  z-index: 2;
+}
+
+/* Scroller  */
+#overflowTest {
+  background: whitesmoke;
+  color: black;
+  padding: 15px;
+  width: 100%;
+  height: 257px;
+  overflow: scroll;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+#overflowTest,
+h4 {
+  margin: auto;
+  font-size: 10px;
+}
+/* table history */
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 0px solid #dddddd;
+  text-align: end;
+  padding: 0px;
+  padding-right: 21px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+tr {
+  height: 12px;
+}
+
+/* Dialpad */
+body {
+  background: #ecf9ff;
+  margin: 0;
+  padding: 0;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 187px;
+  background: #fff;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 #ccc;
+  margin-left: -246px;
+  margin-top: -272px;
+  height: 82%;
+  padding-bottom: 0px;
+}
+
+.header {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  height: 12px;
+  padding-top: 1px;
+}
+
+.header::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.header .input {
+  width: 80%;
+  float: left;
+  padding-left: 10px;
+}
+.header .input input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: none;
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: "montserrat";
+  text-align: right;
+  color: #0a51bc;
+  margin-top: 15px;
+  margin-left: 6px;
+}
+.header .reset {
+  width: 20%;
+  float: left;
+  padding-right: 10px;
+}
+.header .reset button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  font-size: 25px;
+  color: #0a51bc;
+}
+.header .reset button:focus {
+  background: #f8f8f8;
+}
+
+/*  */
+
+.body {
+  background: #fafafa;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.body .row {
+  width: 100%;
+  padding: 24px 0 0;
+}
+
+.body .row::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.body .row .col-3 {
+  width: 31.3333%;
+  float: left;
+  text-align: center;
+}
+.body .row .col-3 button {
+  width: 36px;
+  height: 36px;
+  border-radius: 19%;
+  border: none;
+  font-family: "montserrat";
+  color: #072a9a;
+  background: #fff;
+  box-shadow: 0 5px 10px 0 #eee;
+  font-size: 10px;
+}
+.body .row .col-3 button:focus {
+  background: #f8f8f8;
+}
+
+/*  */
+
+.body .row .col-2 {
+  float: left;
+  width: 73%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.body .row .col-2 button {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border: none;
+  color: #fff;
+  font-size: 25px;
+  box-shadow: 0 5px 10px 0 #eee;
+}
+
+.body .row .col-2 button#add {
+  background: #1094f1;
+}
+.body .row .col-2 button#call {
+  background: #1de0b4;
+}
